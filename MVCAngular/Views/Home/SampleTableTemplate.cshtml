@@ -1,0 +1,19 @@
+﻿@{
+    Layout = "";
+}
+
+<table class="table table-responsive">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Mobile</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="person in $ctrl.dataMembers">
+            <td>{{person.Name}}</td>
+            <td>{{person.Mobile}}</td>
+        </tr>
+    </tbody>
+</table>
+

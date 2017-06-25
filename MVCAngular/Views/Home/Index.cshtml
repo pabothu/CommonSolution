@@ -1,0 +1,7 @@
+﻿@model MVCAngular.Models.EmployeeDetails
+@using MVCAngular.HtmlHelpers;
+@using Newtonsoft.Json;
+
+<main-table></main-table>
+
+@Html.MvcAngularModel("employeeModel", "employees", @Html.Raw(JsonConvert.SerializeObject(Model.Members)))
