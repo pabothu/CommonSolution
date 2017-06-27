@@ -1,7 +1,9 @@
-﻿
+﻿@model MVCAngular.Models.EmployeeDetails
+@using MVCAngular.HtmlHelpers;
+@using Newtonsoft.Json;
+
 @{
-    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_SampleLayout.cshtml";
 }
 
-<h2>Index</h2>
-
+<sample-table members-details="@JsonConvert.SerializeObject(Model.Members)" sample-data="Test"></sample-table>

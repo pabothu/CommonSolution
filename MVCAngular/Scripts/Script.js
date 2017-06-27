@@ -1,4 +1,4 @@
-﻿angular.module("employeeModel").component('mainTable', {
+﻿var employeeModel = angular.module("employeeModel").component('mainTable', {
     controller: class {
         constructor($scope, $http, employees) {
             let $ctrl = this;

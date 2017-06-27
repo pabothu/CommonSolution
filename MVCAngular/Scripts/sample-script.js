@@ -1,10 +1,18 @@
-﻿var app = angular.module("sampleModule", []);
-app.component('sample-data', {
+﻿var sampleModuleApp = angular.module("sampleModule", []);
+sampleModuleApp.component('sampleTable', {
     controller: class {
-        constructor($scope, $http, employees) {
+        constructor($scope, $http) {
             let $ctrl = this;
-            $ctrl.dataMembers = employees;
+            $ctrl.employees = $scope.$ctrl.membersDetails;
+        }
+        $onInit() {
+            let $ctrl = this;
+            $ctrl.employees = $ctrl.membersDetails;
         }
     },
-    templateUrl: "/Home/SampleTableTemplate"
+    bindings: {
+        membersDetails: "<",
+        sampleData: "@"
+    },
+    templateUrl: "/Sample/SampleTableTemplate"
 });
